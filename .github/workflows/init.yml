@@ -12,3 +12,11 @@ jobs:
         run: npm install -g @vue/cli
       - name: Create default Vue Project
         run: vue create -d --merge .
+      - name: Set Git Author
+        run: |
+          git config --global user.name "Akuda"
+          git config --global email "solutions@akuda.io"
+      - name: Push Initial Commit
+        run: |
+          git commit -am "init: add default vue scafolding"
+          git push
